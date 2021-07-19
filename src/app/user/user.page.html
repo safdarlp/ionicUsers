@@ -9,7 +9,7 @@
 
 <ion-content>
     <ion-item *ngIf="!user">
-        <ion-label ion-text-center>
+        <ion-label text-center>
           <ion-spinner></ion-spinner>
         </ion-label>
       </ion-item>
@@ -29,7 +29,7 @@
     
       <ion-fab vertical="bottom" horizontal="end">
         <ion-fab-button  color="secondary">
-          <ion-icon name="arrow-dropleft"></ion-icon>
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
         </ion-fab-button>
     
         <ion-fab-list side="start" *ngIf="user">
@@ -38,10 +38,10 @@
             <ion-icon name="create"></ion-icon>
           </ion-fab-button>
     
-          <ion-fab-button color="danger" [routerLink]="['/user-delete', user._id]">
+          <!-- <ion-fab-button color="danger" [routerLink]="['/user-delete', user._id]"> -->
+          <ion-fab-button color="danger" (click)="deleteUser(user._id)">
             <ion-icon name="trash"></ion-icon>
-          </ion-fab-button>
-    
+          </ion-fab-button>    
         </ion-fab-list>
       </ion-fab>
 

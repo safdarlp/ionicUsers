@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>userEdit</ion-title>
+    <ion-title>user edit</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -37,4 +37,7 @@
   </ion-item>
 
   <ion-button color="primary" expand="full" (click)="onSubmit()">Submit</ion-button>
+
+  <ion-button color="danger" expand="full" [routerLink]="['/users']">Cancel</ion-button>
+
 </ion-content>
